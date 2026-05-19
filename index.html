@@ -348,22 +348,26 @@ async function handleSubmit(e) {
   const msg = document.getElementById('message').value;
 
   try {
-    const response = await fetch("https://formsubmit.co/ajax/prashantmurtale@gmail.com", {
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
       },
       body: JSON.stringify({
+        access_key: "980759a5-f662-4e98-b4e3-dc8b398271c1",
         name: name,
         email: email,
+        subject: "New Message from Portfolio Website",
         message: msg
       })
     });
 
-    if (response.ok) {
+    const json = await response.json();
+
+    if (response.ok && json.success) {
       // Success feedback
-      btn.textContent = 'Message Sent! (Click verification link in your mail if first time)';
+      btn.textContent = 'Message Sent Successfully! ✅';
       btn.style.background = '#10b981'; // Green
       e.target.reset();
       
@@ -373,12 +377,11 @@ async function handleSubmit(e) {
         btn.style.background = '';
       }, 5000);
     } else {
-      const errText = await response.text();
-      console.error("FormSubmit Error Response:", errText);
-      throw new Error("Failed to send: " + response.statusText);
+      console.error("Web3Forms Error Response:", json);
+      throw new Error(json.message || "Failed to send");
     }
   } catch (error) {
-    console.error("FormSubmit Connection Error:", error);
+    console.error("Web3Forms Connection Error:", error);
     // Error feedback
     btn.textContent = '❌ Failed to Send';
     btn.style.background = '#ef4444'; // Red
