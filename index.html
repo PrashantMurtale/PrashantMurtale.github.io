@@ -46,7 +46,7 @@
         <p class="hero-tagline">AI-Powered DevOps Engineer — Building intelligent infrastructure that monitors, heals, and scales itself.</p>
         <div class="hero-stats">
           <div class="stat">
-            <div class="stat-number">10+</div>
+            <div class="stat-number">12+</div>
             <div class="stat-label">Projects</div>
           </div>
           <div class="stat">
@@ -54,7 +54,7 @@
             <div class="stat-label">AI Agents</div>
           </div>
           <div class="stat">
-            <div class="stat-number">5+</div>
+            <div class="stat-number">6</div>
             <div class="stat-label">Services</div>
           </div>
         </div>
@@ -195,6 +195,7 @@ const projects = [
   { cat: 'ai', icon: '💬', title: 'Infra ChatOps Agent', desc: 'Natural language → kubectl commands via Slack. Manage your cluster from chat.', tags: ['Python','Slack Bot','Kubernetes'], url: 'https://github.com/PrashantMurtale/infra-chatops-agent' },
   { cat: 'ai', icon: '🔄', title: 'K8s Self-Healing Agent', desc: 'Auto-detects CrashLoopBackOff, OOMKilled → Self-remediates. Keeps your cluster healthy 24/7.', tags: ['Python','Kubernetes','AI'], url: 'https://github.com/PrashantMurtale/k8s-self-healing-agent' },
   { cat: 'ai', icon: '🤖', title: 'AI Agent Hub', desc: 'A powerful framework for building, orchestrating, and managing AI agents with pluggable architecture.', tags: ['Python','Multi-Agent','Gemini'], url: 'https://github.com/PrashantMurtale/AI-Agent-Hub' },
+  { cat: 'infra', icon: '🔄', title: 'TF Azure Disaster Recovery', desc: 'Recovered 21+ Azure resources from complete IaC data loss with zero downtime. Modular Terraform + GitOps CI/CD + automated drift detection.', tags: ['Terraform','Terraformer','Azure','GitHub Actions'], url: 'https://github.com/PrashantMurtale/tf-azure-disaster-recovery' },
   { cat: 'infra', icon: '🛡️', title: 'Ansible Server Hardening', desc: 'CIS-compliant server hardening with SSH, firewall, fail2ban. Security automation in one playbook.', tags: ['Ansible','Security','Linux'], url: 'https://github.com/PrashantMurtale/ansible-server-hardening' },
   { cat: 'infra', icon: '⚡', title: 'Serverless MVP Starter', desc: 'A serverless boilerplate (Lambda/DynamoDB) that costs $0 when idle. Zero-cost backend starter.', tags: ['Terraform','Python','AWS'], url: 'https://github.com/PrashantMurtale/serverless-mvp-starter' },
   { cat: 'infra', icon: '📊', title: 'Docker Observability Stack', desc: 'One-click Prometheus & Grafana stack for Docker. Turnkey monitoring for any environment.', tags: ['Docker','Prometheus','Grafana'], url: 'https://github.com/PrashantMurtale/docker-observability-stack' },
@@ -209,12 +210,13 @@ const services = [
   { icon: '💸', title: 'Cloud Cost Optimization', desc: 'Auditing cloud bills and reducing waste by 20-30%. Stop overpaying for unused resources.' },
   { icon: '🔄', title: 'CI/CD Implementation', desc: '100% automated GitHub Actions/Jenkins/ArgoCD pipelines for rapid, reliable deployments.' },
   { icon: '🐳', title: 'Containerization', desc: 'Migrating legacy apps to Docker and Kubernetes (EKS/AKS). Modern, portable workloads.' },
+  { icon: '🔄', title: 'Disaster Recovery & IaC', desc: 'Terraform state recovery, infrastructure reverse-engineering, and modular IaC architecture design.' },
 ];
 
 const techStack = [
   { label: 'Intelligence', title: '🧠 AI / ML', items: ['Gemini AI','LangChain','Python','Prompt Engineering'] },
   { label: 'Cloud', title: '☁️ Cloud Platforms', items: ['AWS','Azure','GCP'] },
-  { label: 'Automation', title: '🏗️ IaC & Config', items: ['Terraform','Ansible','Kustomize','Helm'] },
+  { label: 'Automation', title: '🏗️ IaC & Config', items: ['Terraform','Terraformer','Ansible','Kustomize','Helm'] },
   { label: 'Runtime', title: '🐳 Containers', items: ['Docker','Kubernetes','EKS','AKS'] },
   { label: 'Delivery', title: '🚀 CI/CD', items: ['Jenkins','GitHub Actions','ArgoCD'] },
   { label: 'Observability', title: '📊 Monitoring', items: ['Prometheus','Grafana','ELK Stack'] },
