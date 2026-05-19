@@ -373,9 +373,12 @@ async function handleSubmit(e) {
         btn.style.background = '';
       }, 5000);
     } else {
-      throw new Error("Failed to send");
+      const errText = await response.text();
+      console.error("FormSubmit Error Response:", errText);
+      throw new Error("Failed to send: " + response.statusText);
     }
   } catch (error) {
+    console.error("FormSubmit Connection Error:", error);
     // Error feedback
     btn.textContent = '❌ Failed to Send';
     btn.style.background = '#ef4444'; // Red
